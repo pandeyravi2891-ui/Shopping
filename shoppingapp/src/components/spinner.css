@@ -1,0 +1,38 @@
+.spinner{
+     
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #766DF4;
+  position: relative;
+}
+
+.spinner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    #766DF433 0deg 4deg,
+    #0000 4deg 30deg
+  );
+  -webkit-mask: radial-gradient(farthest-side, #0000 74%, #000 76%);
+  mask: radial-gradient(farthest-side, #0000 74%, #000 76%);
+}
+
+.spinner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    #766DF4 0deg 4deg,
+    #0000 4deg 360deg
+  );
+  -webkit-mask: radial-gradient(farthest-side, #0000 74%, #000 76%);
+  mask: radial-gradient(farthest-side, #0000 74%, #000 76%);
+  animation: ck350 1s steps(12) infinite;
+}
+@keyframes ck350 {
+  to { transform: rotate(1turn); }
+}

@@ -1,0 +1,544 @@
+.custom-shape-divider-top-1785052169 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    /* transform: rotate(180deg); */
+}
+
+.custom-shape-divider-top-1785052169 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1785052169 .shape-fill {
+    fill: #d96f16;
+}
+
+
+.custom-shape-divider-bottom-1785053311 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1785053311 svg {
+    position: relative;
+    display: block;
+    width: calc(120% + 1.3px);
+    height: 150px;
+    /* transform: rotateY(180deg); */
+}
+
+.custom-shape-divider-bottom-1785053311 .shape-fill {
+    fill: #fa9d41;
+}
+
+.custom-shape-divider-bottom-1785054090 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1785054090 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1785054090 .shape-fill {
+    fill: #Fdd4ab;
+}
+
+.custom-shape-divider-top-1785054374 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1785054374 svg {
+    position: relative;
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-top-1785054374 .shape-fill {
+    fill: #f9dabb;
+}
+
+.dots{
+    animation-name: hang;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hang {
+
+    0%{
+        transform: rotate(0);
+    }
+
+    50%{
+        transform: rotate(90deg);
+    }
+
+    100%{
+        transform: rotate(0);
+    }
+}
+
+.center{
+    animation-name: fadedown;
+    animation-duration: 1s;
+    animation-timing-function:  ease-in;
+}
+
+@keyframes fadedown {
+
+    0%{
+        opacity: 0;
+        /* top: 0; */
+     transform: scale(0,0);
+
+    }
+  
+    100%{
+        opacity: 1;
+       /* top: 30%; */
+      transform: scale(1,1);
+    }
+}
+
+.cart{
+    animation-name: slideleft;
+    animation-duration: 1s;
+    animation-timing-function:  ease-in;
+    opacity: 0;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideleft {
+
+    0%{
+        opacity: 0;
+        /* right: 0; */
+      transform: scale(0,0);
+
+    }
+   
+    100%{
+        opacity: 1;
+       /* right: 16%; */
+      transform: scale(1,1);
+    }
+}
+
+.parcel{
+    animation-name: parcelleft;
+    animation-duration: 1s;
+    animation-timing-function:  ease-in;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes parcelleft {
+
+    0%{
+        opacity: 0;
+        /* right: 0; */
+    transform: scale(0,0);
+
+    }
+   
+    100%{
+        opacity: 1;
+       /* right: -10%; */
+      transform: scale(1,1);
+    }
+}
+
+.plant1{
+    animation-name: plant1;
+    animation-duration: 1s;
+    animation-timing-function:  ease-in;
+    opacity: 0;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes plant1 {
+
+    0%{
+        opacity: 0;
+        /* right: 0; */
+      transform: scale(0,0);
+
+    }
+     
+    100%{
+        opacity: 1;
+       /* left: -8%; */
+      transform: scale(1,1);
+    }
+}
+
+.shopping{
+    animation-name: shopping;
+    animation-duration: 1s;
+    animation-timing-function:  ease-in;
+    opacity: 0;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shopping {
+
+    0%{
+        opacity: 0;
+        /* right: 0; */
+      transform: scale(0,0);
+
+    }
+
+    100%{
+        opacity: 1;
+       /* left: 3%; */
+    transform: scale(1,1);
+    }
+}
+
+.title{
+    animation-name: title;
+    animation-duration: 1s;
+    animation-timing-function:  ease-in;
+    opacity: 0;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes title {
+
+    0%{
+        opacity: 0;
+       transform: scale(0,0);
+    }
+    
+    100%{
+        opacity: 1;
+      transform: scale(1,1);
+    }
+}
+
+.firstname{
+    animation-name: first;
+    animation-duration: .5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes first {
+
+    0%{
+        opacity: 0;
+       transform: scale(0,0);
+    }
+    
+    100%{
+        opacity: 1;
+      transform: scale(1,1);
+    }
+}
+
+.lastname{
+    animation-name: last;
+    animation-duration: .5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+}
+
+@keyframes last {
+
+    0%{
+        opacity: 0;
+       transform: scale(0,0);
+    }
+    
+    100%{
+        opacity: 1;
+      transform: scale(1,1);
+    }
+}
+
+.email{
+    animation-name: email;
+    animation-duration: .5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+     animation-delay: 1s;
+}
+
+@keyframes email {
+
+    0%{
+        opacity: 0;
+       transform: scale(0,0);
+    }
+    
+    100%{
+        opacity: 1;
+      transform: scale(1,1);
+    }
+}
+
+.password{
+    animation-name: pass;
+    animation-duration: .5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+     animation-delay: 1.5s;
+}
+
+@keyframes pass {
+
+    0%{
+        opacity: 0;
+       transform: scale(0,0);
+    }
+    
+    100%{
+        opacity: 1;
+      transform: scale(1,1);
+    }
+}
+
+.confirm{
+    animation-name: conf;
+    animation-duration: .5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+     animation-delay: 2s;
+}
+
+@keyframes conf {
+
+    0%{
+        opacity: 0;
+       transform: scale(0,0);
+    }
+    
+    100%{
+        opacity: 1;
+      transform: scale(1,1);
+    }
+}
+
+.sign{
+    animation-name: sign;
+    animation-duration: .5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+     animation-delay: 2.5s;
+}
+
+@keyframes sign {
+
+    0%{
+        opacity: 0;
+       transform: scale(0,0);
+    }
+    
+    100%{
+        opacity: 1;
+      transform: scale(1,1);
+    }
+}
+
+.line{
+    animation-name: or;
+    animation-duration: .5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+     animation-delay: 3s;
+}
+
+@keyframes or {
+
+    0%{
+        opacity: 0;
+       transform: scale(0,0);
+    }
+    
+    100%{
+        opacity: 1;
+      transform: scale(1,1);
+    }
+}
+
+.google{
+    animation-name: google;
+    animation-duration: .5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+     animation-delay: 3.5s;
+}
+
+@keyframes google {
+
+    0%{
+        opacity: 0;
+       transform: scale(0,0);
+    }
+    
+    100%{
+        opacity: 1;
+      transform: scale(1,1);
+    }
+}
+
+.button{
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+    border: 4px solid pink;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all 500ms;
+}
+
+.button:hover{
+    scale: calc(1.1);
+}
+
+.button::before{
+    content: "";
+    left: -50%;
+    top: 0;
+    position: absolute;
+     background-color: pink;
+     width: 0;
+     height: 100%;
+     z-index: -1;
+     transition: width 1000ms;
+       transform: skewX(45deg);
+}
+
+.button:hover::before{
+    width: 250%;
+}
+
+.shop{
+    position: relative;
+    overflow: hidden;
+}
+
+.shop::before{
+     content: "";
+    left: -50%;
+    top: 0;
+    position: absolute;
+     background-color: #ffa500;
+     width: 0;
+     height: 100%;
+     z-index: -1;
+     transition: width 1000ms;
+       transform: skewX(45deg);
+}
+
+.shop:hover::before{
+    width: 250%;
+}
+
+.sign{
+    position: relative;
+    overflow: hidden;
+}
+
+.sign:hover{
+    scale: calc(1.1);
+    
+}
+
+.sign::before{
+     content: "";
+    left: -50%;
+    top: 0;
+    position: absolute;
+     background-color: #ffa500;
+     width: 0;
+     height: 100%;
+     z-index: -1;
+     transition: width 1000ms;
+       transform: skewX(45deg);
+}
+
+.sign:hover::before{
+    width: 250%;
+}
+
+.google{
+    position: relative;
+    overflow: hidden;
+}
+
+.google:hover{
+    scale: calc(1.1);
+    
+}
+
+.google::before{
+     content: "";
+    left: -50%;
+    top: 0;
+    position: absolute;
+     background-color: #ffa500;
+     width: 0;
+     height: 100%;
+     z-index: -1;
+     transition: width 1000ms;
+       transform: skewX(45deg);
+}
+
+.google:hover::before{
+    width: 250%;
+}
+
+.facebook{
+   animation: jump 1s infinite;
+   
+}
+
+
+@keyframes jump{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
