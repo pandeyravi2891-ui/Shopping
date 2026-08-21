@@ -59,7 +59,7 @@ function Profile(props) {
         };
 
         getProfile();
-    }, [handleSave]);
+    }, [navigate, token]);
 
     console.log(user);
 
