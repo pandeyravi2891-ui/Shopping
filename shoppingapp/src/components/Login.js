@@ -29,14 +29,13 @@ function Login({ onCall, ...props }) {
         }));
     }
 
-    console.log("Form submitted:", formData1);
-
     const submitHandler = async (event) => {
         event.preventDefault();
 
         setloading(true);
         const toastId = toast.loading("Logging In...");
         const baseurl = process.env.REACT_APP_API_URL || "http://localhost:3000";
+
         try {
             const response = await fetch(`${baseurl}/api/v1/login`, {
                 method: "POST",
