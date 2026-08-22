@@ -29,6 +29,8 @@ function Login({ onCall, ...props }) {
         }));
     }
 
+    console.log(process.env.REACT_APP_API_URL);
+
     const submitHandler = async (event) => {
         event.preventDefault();
 
