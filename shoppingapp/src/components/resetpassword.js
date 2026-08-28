@@ -26,7 +26,7 @@ function ResetPassword(props) {
     const resethandler = async (event) => {
         event.preventDefault();
         const toastId = toast.loading("Reseting Password...");
-        const baseurl = process.env.REACT_APP_API_URL || (window.location.hostname === "localhost" ? "http://localhost:3000" : "https://shopping-an7t.vercel.app");
+        const baseurl = process.env.REACT_APP_API_URL;
         try {
             const response = await fetch(`${baseurl}/api/v1/resetpassword`, {
                 method: "POST",
