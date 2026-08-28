@@ -5,8 +5,7 @@ const app = express();
 // require("dotenv").config()
 // ;
 app.use(cors({
-  origin: "https://shopping-j1sh.vercel.app",
-  // origin: "http://localhost:3001",
+  origin: ["https://shopping-j1sh.vercel.app", "http://localhost:3000", "http://localhost:3001"],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "token"]
