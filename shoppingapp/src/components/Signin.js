@@ -39,7 +39,7 @@ function Signin({ onCall, ...props }) {
         event.preventDefault();
         setloading(true);
         const toastId = toast.loading("Sending OTP to your email...");
-        const baseurl = process.env.REACT_APP_API_URL || "http://localhost:3000";
+        const baseurl = process.env.REACT_APP_API_URL || (window.location.hostname === "localhost" ? "http://localhost:3000" : "https://shopping-lovat-eight.vercel.app");
 
         try {
             const response = await fetch(`${baseurl}/api/v1/signin`, {

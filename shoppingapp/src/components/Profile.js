@@ -19,7 +19,7 @@ function Profile(props) {
     const handleSave = async () => {
         toast.loading("Saving details...");
         const token = localStorage.getItem("token");
-        const baseurl = process.env.REACT_APP_API_URL || "http://localhost:3000";
+        const baseurl = process.env.REACT_APP_API_URL || (window.location.hostname === "localhost" ? "http://localhost:3000" : "https://shopping-lovat-eight.vercel.app");
 
         const response = await fetch(`${baseurl}/api/v1/additionaldetail`, {
             method: "POST",
@@ -44,7 +44,7 @@ function Profile(props) {
 
         const getProfile = async () => {
             const token = localStorage.getItem("token");
-            const baseurl = process.env.REACT_APP_API_URL || "http://localhost:3000";
+            const baseurl = process.env.REACT_APP_API_URL || (window.location.hostname === "localhost" ? "http://localhost:3000" : "https://shopping-lovat-eight.vercel.app");
 
             const response = await fetch(`${baseurl}/api/v1/profile`, {
                 method: "GET",
