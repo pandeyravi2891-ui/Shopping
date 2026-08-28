@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { getBaseUrl } from "../apiUrl";
 
 function Forgotpassword() {
 
@@ -14,7 +15,7 @@ function Forgotpassword() {
 
         setData1(prevData => ({
             ...prevData,
-            [event.target.name]: [event.target.value]
+            [event.target.name]: event.target.value
         }));
     }
 
@@ -22,7 +23,7 @@ function Forgotpassword() {
         event.preventDefault();
         console.log("Email submitted:", data1);
         const toastId = toast.loading("Finding Account...");
-        const baseurl = process.env.REACT_APP_API_URL;
+        const baseurl = getBaseUrl();
         try {
             const response = await fetch(`${baseurl}/api/v1/forgotpassword`, {
                 method: "POST",

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { getBaseUrl } from '../apiUrl';
 
 
 function Profile(props) {
@@ -19,7 +20,7 @@ function Profile(props) {
     const handleSave = async () => {
         toast.loading("Saving details...");
         const token = localStorage.getItem("token");
-        const baseurl = process.env.REACT_APP_API_URL;
+        const baseurl = getBaseUrl();
 
         const response = await fetch(`${baseurl}/api/v1/additionaldetail`, {
             method: "POST",
@@ -44,7 +45,7 @@ function Profile(props) {
 
         const getProfile = async () => {
             const token = localStorage.getItem("token");
-            const baseurl = process.env.REACT_APP_API_URL;
+            const baseurl = getBaseUrl();
 
             const response = await fetch(`${baseurl}/api/v1/profile`, {
                 method: "GET",

@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import signinIllustration from '../assets/signin_illustration.jpg';
 import './wave.css';
 
+import { getBaseUrl } from '../apiUrl';
+
 function Signin({ onCall, ...props }) {
     const [showpass, setshowpass] = useState(false);
     const [showpass1, setshowpass1] = useState(false);
@@ -39,7 +41,7 @@ function Signin({ onCall, ...props }) {
         event.preventDefault();
         setloading(true);
         const toastId = toast.loading("Sending OTP to your email...");
-        const baseurl = process.env.REACT_APP_API_URL;
+        const baseurl = getBaseUrl();
 
         try {
             const response = await fetch(`${baseurl}/api/v1/signin`, {

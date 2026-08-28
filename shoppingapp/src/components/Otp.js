@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { toast } from 'react-hot-toast';
 import { motion, AnimatePresence } from "framer-motion";
 
+import { getBaseUrl } from '../apiUrl';
+
 function Otp(props) {
   let setislogged = props.setislogged;
   let data1 = props.data1;
@@ -91,7 +93,7 @@ function Otp(props) {
       return;
     }
 
-    const baseurl = process.env.REACT_APP_API_URL;
+    const baseurl = getBaseUrl();
     try {
       const response = await fetch(`${baseurl}/api/v1/otpverification`, {
         method: "POST",

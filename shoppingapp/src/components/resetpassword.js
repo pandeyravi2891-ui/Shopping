@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom';
+import { getBaseUrl } from "../apiUrl";
 
 
 function ResetPassword(props) {
@@ -19,14 +20,14 @@ function ResetPassword(props) {
     function changeHandler(event) {
         setData(prevData => ({
             ...prevData,
-            [event.target.name]: [event.target.value]
+            [event.target.name]: event.target.value
         }));
     }
 
     const resethandler = async (event) => {
         event.preventDefault();
         const toastId = toast.loading("Reseting Password...");
-        const baseurl = process.env.REACT_APP_API_URL;
+        const baseurl = getBaseUrl();
         try {
             const response = await fetch(`${baseurl}/api/v1/resetpassword`, {
                 method: "POST",

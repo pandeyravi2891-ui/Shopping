@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import loginIllustration from '../assets/login_illustration.jpg';
 import './wave.css';
 
+import { getBaseUrl } from '../apiUrl';
+
 function Login({ onCall, ...props }) {
     let { setislogged } = props;
     // let onCall = props.onCall;
@@ -34,7 +36,7 @@ function Login({ onCall, ...props }) {
 
         setloading(true);
         const toastId = toast.loading("Logging In...");
-        const baseurl = process.env.REACT_APP_API_URL;
+        const baseurl = getBaseUrl();
 
         try {
             const response = await fetch(`${baseurl}/api/v1/login`, {
