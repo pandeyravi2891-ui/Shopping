@@ -91,7 +91,7 @@ function Otp(props) {
       return;
     }
 
-    const baseurl = process.env.REACT_APP_API_URL || (window.location.hostname === "localhost" ? "http://localhost:3000" : "https://shopping-lovat-eight.vercel.app");
+    const baseurl = process.env.REACT_APP_API_URL || (window.location.hostname === "localhost" ? "http://localhost:3000" : "https://shopping-an7t.vercel.app");
     try {
       const response = await fetch(`${baseurl}/api/v1/otpverification`, {
         method: "POST",

@@ -29,14 +29,12 @@ function Login({ onCall, ...props }) {
         }));
     }
 
-    console.log(process.env.REACT_APP_API_URL);
-
     const submitHandler = async (event) => {
         event.preventDefault();
 
         setloading(true);
         const toastId = toast.loading("Logging In...");
-        const baseurl = process.env.REACT_APP_API_URL || (window.location.hostname === "localhost" ? "http://localhost:3000" : "https://shopping-lovat-eight.vercel.app");
+        const baseurl = process.env.REACT_APP_API_URL || (window.location.hostname === "localhost" ? "http://localhost:3000" : "https://shopping-an7t.vercel.app");
 
         try {
             const response = await fetch(`${baseurl}/api/v1/login`, {
