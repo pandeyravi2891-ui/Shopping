@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { Route, Routes, useLocation, Navigate } from 'react-router-dom';
+import { Route, Routes, useLocation, Navigate ,useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
@@ -22,7 +22,7 @@ function App() {
   const [totalAmount, settotalAmount] = useState(0);
 
   const location = useLocation();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (location.pathname === '/') {
@@ -30,7 +30,12 @@ function App() {
       setdata1("");
       setvalue("");
     }
+    
   }, [location]);
+
+  useEffect(() => {
+    navigate("/");
+}, []);
 
   function data(formData) {
     setdata1(formData);
