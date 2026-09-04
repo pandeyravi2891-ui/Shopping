@@ -5,7 +5,7 @@ const app = express();
 // require("dotenv").config()
 // ;
 app.use(cors({
-  origin: true,
+  origin: "https://shopping-oka7.vercel.app",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "token"]
