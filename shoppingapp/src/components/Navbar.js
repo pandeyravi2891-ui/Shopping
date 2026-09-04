@@ -20,7 +20,7 @@ function Navbar(props) {
   const { cart } = useSelector((state) => state);
   const { wish } = useSelector((state) => state);
   const location = useLocation();
-  // const [scrolle setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -67,8 +67,8 @@ function Navbar(props) {
                 <motion.div
                   whileHover={{ y: -1 }}
                   className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${isActive
-                      ? 'bg-orange-500/10 text-orange-600'
-                      : 'text-slate-600 hover:text-orange-500 hover:bg-orange-50'
+                    ? 'bg-orange-500/10 text-orange-600'
+                    : 'text-slate-600 hover:text-orange-500 hover:bg-orange-50'
                     }`}
                 >
                   <Icon className="text-base" />

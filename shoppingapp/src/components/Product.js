@@ -38,7 +38,7 @@ function Product(props) {
   const { wish } = useSelector((state) => state);
   const Dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
-  // const [justAdded, setJustAdded] = useState(false);
+  const [justAdded, setJustAdded] = useState(false);
 
   const isInCart = cart?.some((p) => p.id === post.id);
   const isLiked = wish?.some((p) => p.id === post.id);
@@ -175,8 +175,8 @@ function Product(props) {
             whileTap={{ scale: 0.94 }}
             onClick={isInCart ? removeHandler : addHandler}
             className={`relative flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 btn-ripple overflow-hidden ${isInCart
-                ? "bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-red-50 hover:text-red-500 hover:border-red-200"
-                : "bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40"
+              ? "bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-red-50 hover:text-red-500 hover:border-red-200"
+              : "bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40"
               }`}
           >
             <AnimatePresence mode="wait">
