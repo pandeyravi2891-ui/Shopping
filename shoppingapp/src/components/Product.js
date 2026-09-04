@@ -38,7 +38,7 @@ function Product(props) {
   const { wish } = useSelector((state) => state);
   const Dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
-  const [justAdded, setJustAdded] = useState(false);
+  const [, setJustAdded] = useState(false);
 
   const isInCart = cart?.some((p) => p.id === post.id);
   const isLiked = wish?.some((p) => p.id === post.id);

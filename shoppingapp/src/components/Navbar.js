@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import toast from "react-hot-toast";
 import { LiaOpencart } from "react-icons/lia";
 import { useSelector } from "react-redux";
@@ -20,13 +20,7 @@ function Navbar(props) {
   const { cart } = useSelector((state) => state);
   const { wish } = useSelector((state) => state);
   const location = useLocation();
-  const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div className="flex items-center justify-between gap-4 w-full max-w-7xl px-4 sm:px-6 select-none">
