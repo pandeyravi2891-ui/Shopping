@@ -5,5 +5,5 @@ export const getBaseUrl = () => {
   // if (typeof window !== "undefined" && window.location.hostname === "localhost") {
   //   return "http://localhost:3000";
   // }
-  return "https://shopping-tawny-kappa.vercel.app/";
+  return "https://shopping-tawny-kappa.vercel.app";
 };
