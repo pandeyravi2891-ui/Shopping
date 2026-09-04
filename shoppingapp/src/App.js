@@ -22,7 +22,7 @@ function App() {
   const [totalAmount, settotalAmount] = useState(0);
 
   const location = useLocation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     if (location.pathname === '/') {

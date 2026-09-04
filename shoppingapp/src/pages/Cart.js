@@ -5,7 +5,7 @@ import CartItem from '../components/CartItem';
 import { motion, AnimatePresence } from "framer-motion";
 import { FiShoppingCart, FiTag, FiArrowLeft, FiTruck, FiLock } from "react-icons/fi";
 import { HiSparkles, HiLightningBolt } from "react-icons/hi";
-import { MdLocalShipping, MdVerified } from "react-icons/md";
+// import { MdLocalShipping, MdVerified } from "react-icons/md";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 
 function Cart(props) {
@@ -166,19 +166,17 @@ function Cart(props) {
                                             value={coupon}
                                             onChange={(e) => setCoupon(e.target.value)}
                                             placeholder="Enter coupon code"
-                                            className={`flex-1 px-4 py-2.5 rounded-xl text-sm border-2 outline-none transition-all ${
-                                                couponApplied ? "border-emerald-400 bg-emerald-50 text-emerald-700" : "border-slate-200 bg-slate-50 focus:border-orange-400"
-                                            }`}
+                                            className={`flex-1 px-4 py-2.5 rounded-xl text-sm border-2 outline-none transition-all ${couponApplied ? "border-emerald-400 bg-emerald-50 text-emerald-700" : "border-slate-200 bg-slate-50 focus:border-orange-400"
+                                                }`}
                                         />
                                         <motion.button
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
                                             onClick={handleCoupon}
-                                            className={`px-4 py-2.5 rounded-xl text-xs font-black transition-all ${
-                                                couponApplied
+                                            className={`px-4 py-2.5 rounded-xl text-xs font-black transition-all ${couponApplied
                                                     ? "bg-emerald-100 text-emerald-700"
                                                     : "bg-slate-800 text-white hover:bg-slate-700"
-                                            }`}
+                                                }`}
                                         >
                                             {couponApplied ? "✓ Applied" : "Apply"}
                                         </motion.button>

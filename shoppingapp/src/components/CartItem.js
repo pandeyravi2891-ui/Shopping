@@ -1,6 +1,6 @@
 import React from "react";
 import { TbTrash } from "react-icons/tb";
-import { FiMinus, FiPlus } from "react-icons/fi";
+// import { FiMinus, FiPlus } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { remove } from "../redux/Slices/cartSlice";
 import { toast } from 'react-hot-toast';

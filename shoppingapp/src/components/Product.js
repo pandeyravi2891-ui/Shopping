@@ -3,17 +3,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { adder, remove } from "../redux/Slices/cartSlice.js";
 import { like, unlike } from '../redux/Slices/wishlistslice.js';
 import toast from "react-hot-toast";
-import { FcLike, FcLikePlaceholder } from "react-icons/fc";
+import { FcLike } from "react-icons/fc";
 import { FaStar, FaStarHalf } from "react-icons/fa";
 import { FiShoppingCart, FiCheck, FiEye } from "react-icons/fi";
 import { HiOutlineHeart } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 
 const categoryColors = {
-  "men's clothing":    { bg: "from-slate-700 to-slate-800", text: "text-slate-700", badge: "bg-slate-100 text-slate-700" },
-  "women's clothing":  { bg: "from-pink-500 to-rose-600", text: "text-pink-700", badge: "bg-pink-50 text-pink-700" },
-  "electronics":       { bg: "from-blue-500 to-indigo-600", text: "text-blue-700", badge: "bg-blue-50 text-blue-700" },
-  "jewelery":          { bg: "from-purple-500 to-violet-600", text: "text-purple-700", badge: "bg-purple-50 text-purple-700" },
+  "men's clothing": { bg: "from-slate-700 to-slate-800", text: "text-slate-700", badge: "bg-slate-100 text-slate-700" },
+  "women's clothing": { bg: "from-pink-500 to-rose-600", text: "text-pink-700", badge: "bg-pink-50 text-pink-700" },
+  "electronics": { bg: "from-blue-500 to-indigo-600", text: "text-blue-700", badge: "bg-blue-50 text-blue-700" },
+  "jewelery": { bg: "from-purple-500 to-violet-600", text: "text-purple-700", badge: "bg-purple-50 text-purple-700" },
 };
 
 function StarRating({ rating }) {
@@ -38,7 +38,7 @@ function Product(props) {
   const { wish } = useSelector((state) => state);
   const Dispatch = useDispatch();
   const [isHovered, setIsHovered] = useState(false);
-  const [justAdded, setJustAdded] = useState(false);
+  // const [justAdded, setJustAdded] = useState(false);
 
   const isInCart = cart?.some((p) => p.id === post.id);
   const isLiked = wish?.some((p) => p.id === post.id);
@@ -115,7 +115,7 @@ function Product(props) {
       <div className="w-full h-52 flex justify-center items-center p-6 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(249,115,22,0.05)_0%,transparent_70%)]" />
-        
+
         <motion.img
           animate={{ scale: isHovered ? 1.12 : 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
@@ -174,11 +174,10 @@ function Product(props) {
             whileHover={{ scale: 1.06 }}
             whileTap={{ scale: 0.94 }}
             onClick={isInCart ? removeHandler : addHandler}
-            className={`relative flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 btn-ripple overflow-hidden ${
-              isInCart
+            className={`relative flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-200 btn-ripple overflow-hidden ${isInCart
                 ? "bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-red-50 hover:text-red-500 hover:border-red-200"
                 : "bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40"
-            }`}
+              }`}
           >
             <AnimatePresence mode="wait">
               {isInCart ? (

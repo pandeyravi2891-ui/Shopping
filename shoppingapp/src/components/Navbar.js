@@ -3,8 +3,8 @@ import toast from "react-hot-toast";
 import { LiaOpencart } from "react-icons/lia";
 import { useSelector } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
-import { CiFaceSmile } from "react-icons/ci";
-import { IoMdPerson } from "react-icons/io";
+// import { CiFaceSmile } from "react-icons/ci";
+// import { IoMdPerson } from "react-icons/io";
 import { HiOutlineHeart } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiShoppingBag, FiUser, FiLogOut, FiHome } from "react-icons/fi";
@@ -20,7 +20,7 @@ function Navbar(props) {
   const { cart } = useSelector((state) => state);
   const { wish } = useSelector((state) => state);
   const location = useLocation();
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolle setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -30,7 +30,7 @@ function Navbar(props) {
 
   return (
     <div className="flex items-center justify-between gap-4 w-full max-w-7xl px-4 sm:px-6 select-none">
-      
+
       {/* Logo */}
       <motion.div
         whileHover={{ scale: 1.03 }}
@@ -66,11 +66,10 @@ function Navbar(props) {
               <NavLink key={to} to={to}>
                 <motion.div
                   whileHover={{ y: -1 }}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
-                    isActive
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${isActive
                       ? 'bg-orange-500/10 text-orange-600'
                       : 'text-slate-600 hover:text-orange-500 hover:bg-orange-50'
-                  }`}
+                    }`}
                 >
                   <Icon className="text-base" />
                   <span>{label}</span>

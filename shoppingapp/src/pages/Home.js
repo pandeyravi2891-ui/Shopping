@@ -6,12 +6,12 @@ import Toggle from '../components/Toggle';
 import { NavLink } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoApps } from "react-icons/io5";
-import { FaUserTie, FaStar, FaFire } from "react-icons/fa";
+import { FaUserTie } from "react-icons/fa";
 import { GiDress } from "react-icons/gi";
-import { MdOutlineDevices, MdTrendingUp } from "react-icons/md";
+import { MdOutlineDevices } from "react-icons/md";
 import { BsGem } from "react-icons/bs";
 import { FiSearch, FiX, FiSliders, FiGrid, FiList } from "react-icons/fi";
-import { HiLightningBolt, HiSparkles } from "react-icons/hi";
+import { HiSparkles } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Home(props) {
@@ -123,7 +123,7 @@ function Home(props) {
 
             {/* ===== MAIN CONTENT ===== */}
             <div className="w-full max-w-7xl mx-auto px-4 py-8">
-                
+
                 {/* Section Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-7">
                     <div>
@@ -200,17 +200,15 @@ function Home(props) {
                                 whileHover={{ scale: 1.04 }}
                                 whileTap={{ scale: 0.96 }}
                                 onClick={() => setSelectedCategory(cat.id)}
-                                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 ${
-                                    isSelected
+                                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 ${isSelected
                                         ? "bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-500/25"
                                         : "bg-white text-slate-600 hover:text-orange-600 border border-slate-200 hover:border-orange-300 hover:shadow-md shadow-sm"
-                                }`}
+                                    }`}
                             >
                                 <Icon className={`text-base ${isSelected ? "text-white" : "text-orange-500"}`} />
                                 <span>{cat.label}</span>
-                                <span className={`px-2 py-0.5 rounded-full text-[10px] font-black ${
-                                    isSelected ? "bg-white/20 text-white" : "bg-orange-100 text-orange-700"
-                                }`}>
+                                <span className={`px-2 py-0.5 rounded-full text-[10px] font-black ${isSelected ? "bg-white/20 text-white" : "bg-orange-100 text-orange-700"
+                                    }`}>
                                     {count}
                                 </span>
                             </motion.button>
@@ -254,11 +252,10 @@ function Home(props) {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className={`w-full ${
-                            viewMode === "grid"
+                        className={`w-full ${viewMode === "grid"
                                 ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
                                 : "flex flex-col gap-4"
-                        }`}
+                            }`}
                     >
                         {filteredPosts.map((post) => (
                             viewMode === "grid" ? (

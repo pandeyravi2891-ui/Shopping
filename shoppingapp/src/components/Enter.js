@@ -7,9 +7,9 @@ import { MdLocalShipping, MdVerified } from "react-icons/md";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { VscVerified } from "react-icons/vsc";
-import { HiLightningBolt, HiTrendingUp } from "react-icons/hi";
+import { HiLightningBolt } from "react-icons/hi";
 import { FiArrowRight } from "react-icons/fi";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import logoImg from "../assets/logo.jpg";
 
 const categories = [
