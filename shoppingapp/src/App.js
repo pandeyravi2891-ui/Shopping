@@ -33,9 +33,9 @@ function App() {
     
   }, [location]);
 
-  useEffect(() => {
-    navigate("/");
-}, []);
+//   useEffect(() => {
+//     navigate("/");
+// }, []);
 
   function data(formData) {
     setdata1(formData);
